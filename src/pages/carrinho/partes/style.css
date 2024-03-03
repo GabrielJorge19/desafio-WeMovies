@@ -1,0 +1,43 @@
+@media (min-width: 767px) {
+    .finalizarPedido {
+        flex-direction: row-reverse !important;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .finalizarPedidoBotao{
+        flex: 1 0 25% !important;
+        flex-grow: 0 !important;
+    }
+    
+    .divisor{
+        margin-bottom: 20px;
+    }
+
+    .totalContainer{
+        flex: .7;
+        align-items: center;
+    }
+
+    .totalContainer span{
+        text-align: right !important;
+    }
+
+    .carrinhoContainer{
+        flex: 0 !important;
+        /* height: 0 !important; */
+        /* height: 100%; */
+    }
+
+    .dadosDoFilme{
+        flex-direction: row !important;
+        height: 80%;
+        margin: auto;
+    }
+
+    .dadosDoFilmesParte1{
+        flex-direction: column !important;
+        justify-content: space-evenly !important;
+    }
+}
