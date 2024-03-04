@@ -5,7 +5,7 @@ import './style.css';
 import { ContextCarrinho } from '../../services/contexts';
 import { useNavigate } from "react-router-dom";
 
-export function Header() {
+export function Header(): React.JSX.Element {
 
     const {carrinho} = useContext(ContextCarrinho);
     const navigate = useNavigate();

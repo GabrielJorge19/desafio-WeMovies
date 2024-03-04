@@ -17,7 +17,7 @@ export function FilmesNoCarrinho({ carrinho, setCarrinho }: ContextCarrinhoType)
 
     let valorTotal = carrinho.reduce((acumulado, filme) => acumulado + filme.quant * filme.price, 0).toFixed(2);
 
-    const setQuantidade = (id: number, valor: number) => {
+    const setQuantidade = (id: number, valor: number): void => {
         setCarrinho(prev => {
             let arr = prev.slice();
             let obj = arr.find(el => el.id === id);
@@ -26,7 +26,7 @@ export function FilmesNoCarrinho({ carrinho, setCarrinho }: ContextCarrinhoType)
         })
     }
 
-    const removerFilme = (id: number) => {
+    const removerFilme = (id: number): void => {
         setCarrinho(prev =>
             prev.filter(filme => filme.id !== id)
         )

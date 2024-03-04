@@ -1,32 +1,20 @@
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useState, useEffect } from "react";
-import { Home } from "./pages/home/index"
-import { Carrinho } from "./pages/carrinho/index"
-import { CompraRealizada } from "./pages/compraRealizada/index"
+import React, { useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Carrinho } from "./pages/carrinho/index";
+import { CompraRealizada } from "./pages/compraRealizada/index";
+import { Home } from "./pages/home/index";
 import { ContextCarrinho, ContextFilmes } from './services/contexts';
+ 
 
 
-
-function App() {
+function App(): React.JSX.Element {
 
     const [carrinho, setCarrinho] = useState<FilmeCarrinho[]>([]);
-    const [filmes, setFilmes] = useState([]);
-
-    useEffect(() => {
-        fetch('http://localhost:3001/products')
-            .then((response) => response.json())
-            .then((response) => {
-                setTimeout(() => {          // Pausa adicionada apenas para simular o carregamento.
-                    setFilmes(response);
-                }, 2500);
-            });
-    }, []);
-
+    const [filmes, setFilmes] = useState<Filme[]>([]);
 
     return (
         <ContextCarrinho.Provider value={{ carrinho, setCarrinho }}>
-            <ContextFilmes.Provider value={{ filmes }}>
+            <ContextFilmes.Provider value={{ filmes, setFilmes }}>
                 <BrowserRouter>
                     <Routes>
                         <Route path="/" Component={Home} />

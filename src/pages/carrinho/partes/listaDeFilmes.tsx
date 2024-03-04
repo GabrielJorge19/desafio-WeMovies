@@ -3,7 +3,7 @@ import { ReactComponent as Lixeira } from '../../../assets/lixeira.svg';
 import { ReactComponent as Mais } from '../../../assets/mais.svg';
 import { ReactComponent as Menos } from '../../../assets/menos.svg';
 
-export function ListaDeFilmes({ carrinho, setQuantidade, removerFilme }: DisplayFilmesPropsInterface) {
+export function ListaDeFilmes({ carrinho, setQuantidade, removerFilme }: DisplayFilmesPropsInterface): React.JSX.Element {
 
     return <div style={styles.container}>
 

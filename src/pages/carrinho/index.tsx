@@ -4,7 +4,7 @@ import { FilmesNoCarrinho } from './partes/filmesNoCarrinho'
 import React, { useContext } from 'react';
 import { ContextCarrinho } from '../../services/contexts';
 
-export function Carrinho(){
+export function Carrinho(): React.JSX.Element {
 
     const {carrinho, setCarrinho} = useContext(ContextCarrinho);
 
